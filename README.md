@@ -16,7 +16,7 @@ The repository primarily contains codes to generate analytical and numerical wit
 Clone the repository:
 ```git clone https://github.com/Tinkidinki/cvenn-codes.git```
 
-## To generate analytical witness 
+## To generate an analytical witness 
 Open matlab in the same directory as all the files are present:
 
 To use functions in analytical witness file:
