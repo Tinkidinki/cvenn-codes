@@ -5,14 +5,16 @@ This repository contains all the codes used to generate results in the paper
 It also contains a few quantum functions useful for 2-qubit systems written in `sage`. 
 
 Functions from the following libraries have been used to write the functions in this repository. 
-- cvx
-- cvxquad
-- quantinf
+- [cvx](http://cvxr.com/cvx/)
+- [cvxquad](https://github.com/hfawzi/cvxquad)
+- [quantinf](http://www.dr-qubit.org/matlab.html)
+
+cvx and quantinf have already been added in this repository. Please follow the [cvxquad](https://github.com/hfawzi/cvxquad) link to find install instructions for that package. 
 
 The repository primarily contains codes to generate analytical and numerical witnesses to separate a given state from the CVENN class. 
 
 Clone the repository:
-
+```git clone https://github.com/Tinkidinki/cvenn-codes.git```
 
 ## To generate analytical witness 
 Open matlab in the same directory as all the files are present:
