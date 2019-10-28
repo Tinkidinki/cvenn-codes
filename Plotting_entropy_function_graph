@@ -1,0 +1,92 @@
+entropy_func = @(d,a)-(d^2-1)*(a/d^2*log2(a/d^2))-(a/d^2+1-a)*log2(a/d^2+1-a)-log2(d)
+
+entropy_func =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(d,a)-(d^2-1)*(a/d^2*log2(a/d^2))-(a/d^2+1-a)*log2(a/d^2+1-a)-log2(d)
+
+fimplicit(entropy_func, [0 30 0 1])
+[Warning: Function behaves unexpectedly on array inputs. To improve performance, properly vectorize your
+function to return an output with the same size and shape as the input arguments.] 
+[> In matlab.graphics.function.ImplicitFunctionLine>getFunction
+  In matlab.graphics.function.ImplicitFunctionLine/updateFunction
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function_I
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function
+  In matlab.graphics.function.ImplicitFunctionLine
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>singleFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 189)" style="font-weight:bold">fimplicit>singleFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',189,0)">line 189</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>vectorizeFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>vectorizeFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 126)" style="font-weight:bold">fimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',126,0)">line 126</a>)] 
+fimplicit(entropy_func, [2 30 0 1])
+[Warning: Function behaves unexpectedly on array inputs. To improve performance, properly vectorize your
+function to return an output with the same size and shape as the input arguments.] 
+[> In matlab.graphics.function.ImplicitFunctionLine>getFunction
+  In matlab.graphics.function.ImplicitFunctionLine/updateFunction
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function_I
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function
+  In matlab.graphics.function.ImplicitFunctionLine
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>singleFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 189)" style="font-weight:bold">fimplicit>singleFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',189,0)">line 189</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>vectorizeFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>vectorizeFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 126)" style="font-weight:bold">fimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',126,0)">line 126</a>)] 
+entropy_func = @(d,a)-(d^2-1)*((1-a)/d^2*log2((1-a)/d^2))-((1-a)/d^2+a)*log2((1-a)/d^2+a)-log2(d)
+
+entropy_func =
+
+  <a href="matlab:helpPopup function_handle" style="font-weight:bold">function_handle</a> with value:
+
+    @(d,a)-(d^2-1)*((1-a)/d^2*log2((1-a)/d^2))-((1-a)/d^2+a)*log2((1-a)/d^2+a)-log2(d)
+
+fimplicit(entropy_func, [2 30 0 1])
+[Warning: Function behaves unexpectedly on array inputs. To improve performance, properly vectorize your
+function to return an output with the same size and shape as the input arguments.] 
+[> In matlab.graphics.function.ImplicitFunctionLine>getFunction
+  In matlab.graphics.function.ImplicitFunctionLine/updateFunction
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function_I
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function
+  In matlab.graphics.function.ImplicitFunctionLine
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>singleFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 189)" style="font-weight:bold">fimplicit>singleFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',189,0)">line 189</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>vectorizeFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>vectorizeFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 126)" style="font-weight:bold">fimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',126,0)">line 126</a>)] 
+fimplicit(entropy_func, [2 30 0.5 1])
+[Warning: Function behaves unexpectedly on array inputs. To improve performance, properly vectorize your
+function to return an output with the same size and shape as the input arguments.] 
+[> In matlab.graphics.function.ImplicitFunctionLine>getFunction
+  In matlab.graphics.function.ImplicitFunctionLine/updateFunction
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function_I
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function
+  In matlab.graphics.function.ImplicitFunctionLine
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>singleFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 189)" style="font-weight:bold">fimplicit>singleFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',189,0)">line 189</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>vectorizeFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>vectorizeFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 126)" style="font-weight:bold">fimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',126,0)">line 126</a>)] 
+fimplicit(entropy_func, [2 30 0.5 0.8])
+[Warning: Function behaves unexpectedly on array inputs. To improve performance, properly vectorize your
+function to return an output with the same size and shape as the input arguments.] 
+[> In matlab.graphics.function.ImplicitFunctionLine>getFunction
+  In matlab.graphics.function.ImplicitFunctionLine/updateFunction
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function_I
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function
+  In matlab.graphics.function.ImplicitFunctionLine
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>singleFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 189)" style="font-weight:bold">fimplicit>singleFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',189,0)">line 189</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>vectorizeFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>vectorizeFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 126)" style="font-weight:bold">fimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',126,0)">line 126</a>)] 
+fimplicit(entropy_func, [2 50 0.5 0.8])
+[Warning: Function behaves unexpectedly on array inputs. To improve performance, properly vectorize your
+function to return an output with the same size and shape as the input arguments.] 
+[> In matlab.graphics.function.ImplicitFunctionLine>getFunction
+  In matlab.graphics.function.ImplicitFunctionLine/updateFunction
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function_I
+  In matlab.graphics.function.ImplicitFunctionLine/set.Function
+  In matlab.graphics.function.ImplicitFunctionLine
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>singleFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 189)" style="font-weight:bold">fimplicit>singleFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',189,0)">line 189</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>@(f)singleFimplicit(cax,f,limits,extraOpts,args)</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit>vectorizeFimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 148)" style="font-weight:bold">fimplicit>vectorizeFimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',148,0)">line 148</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fimplicit', '/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m', 126)" style="font-weight:bold">fimplicit</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2019a/toolbox/matlab/graphics/function/fimplicit.m',126,0)">line 126</a>)] 
+diary_off
+{Undefined function or variable 'diary_off'.
+} 
+diary off
