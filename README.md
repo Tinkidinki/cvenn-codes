@@ -1,7 +1,7 @@
 # Characterization of Conditional Von Neumann Entropy
 
-This repository contains all the codes used to generate results in the paper
-'Characterization of Conditional Von Neumann Entropy' written in `MATLAB` The pdf of the paper is available in the repository. 
+This repository contains all the codes written in `MATLAB` used to generate results in the paper
+'Characterization of Conditional Von Neumann Entropy'  The pdf of the paper is available in the repository. 
 It also contains a few quantum functions useful for 2-qubit systems written in `sage`. 
 
 Functions from the following libraries have been used to write the functions in this repository. 
