@@ -66,7 +66,10 @@ Check other states against this witness
 
 ## Further work:
 
-The distance from the witness is an example of an entanglement measure of the state. Comparing how the analytical and numerical witness perform as such a measure could be an interesting project. Note that the numerical witness finds distance from the closest CVENN state, whereas the analytical witness finds distance from any state at the boundary. (Read paper for more details).
+The distance of a state from a CVENN witness is one of the ways in which entanglement of a state is quantified. Comparing how the analytical and numerical witness perform as such a measure could be an interesting project. Note that the numerical witness finds distance from the closest CVENN state, whereas the analytical witness finds distance from any state at the boundary. (Read paper for more details).
 
+## Contact:
+
+Please contact the author Mahathi Vempati at ```mahathi.vempati@research.iiit.ac.in``` for any queries, or discussion. 
 
 
