@@ -40,7 +40,7 @@ Test any other state against the witness to see if states inside CVENN give a po
 
 ## To generate a numerical witness
 Note that unlike the analytical witness which quickly finds solutions for large dimensions, the numerical witness takes a 
-long time to converge for greater than a 2-qubit system. To find a witness for a 2-qubit or 2-qutrit system, do the following. Note that the 3-qutrit system will take 8-9 minutes to find the closest state. 
+long time to converge for greater than a 2-qubit system. To find a witness for a 2-qubit or 2-qutrit system, do the following. Note that the 2-qutrit system will take 8-9 minutes to find the closest state. 
 
 We would have to use the `cvx` library to converge to the closest CVENN state. To setup cvx, open MATLAB in the cvx folder of this repository and run `cvx_setup` in MATLAB. 
 
