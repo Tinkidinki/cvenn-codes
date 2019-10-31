@@ -1,20 +1,22 @@
 # Characterization of Conditional Von Neumann Entropy
 
-This repository contains all the codes used to generate results in the paper
-'Characterization of Conditional Von Neumann Entropy' written in `MATLAB` The pdf of the paper is available in the repository. 
+This repository contains all the codes written in `MATLAB` used to generate results in the paper
+'Characterization of Conditional Von Neumann Entropy'  The pdf of the paper is available in the repository. 
 It also contains a few quantum functions useful for 2-qubit systems written in `sage`. 
 
 Functions from the following libraries have been used to write the functions in this repository. 
-- cvx
-- cvxquad
-- quantinf
+- [cvx](http://cvxr.com/cvx/)
+- [cvxquad](https://github.com/hfawzi/cvxquad)
+- [quantinf](http://www.dr-qubit.org/matlab.html)
+
+cvx and quantinf have already been added in this repository. Please follow the [cvxquad](https://github.com/hfawzi/cvxquad) link to find install instructions for that package. 
 
 The repository primarily contains codes to generate analytical and numerical witnesses to separate a given state from the CVENN class. 
 
 Clone the repository:
+```git clone https://github.com/Tinkidinki/cvenn-codes.git```
 
-
-## To generate analytical witness 
+## To generate an analytical witness 
 Open matlab in the same directory as all the files are present:
 
 To use functions in analytical witness file:
@@ -38,7 +40,7 @@ Test any other state against the witness to see if states inside CVENN give a po
 
 ## To generate a numerical witness
 Note that unlike the analytical witness which quickly finds solutions for large dimensions, the numerical witness takes a 
-long time to converge for greater than a 2-qubit system. To find a witness for a 2-qubit or 2-qutrit system, do the following. Note that the 3-qutrit system will take 8-9 minutes to find the closest state. 
+long time to converge for greater than a 2-qubit system. To find a witness for a 2-qubit or 2-qutrit system, do the following. Note that the 2-qutrit system will take 8-9 minutes to find the closest state. 
 
 We would have to use the `cvx` library to converge to the closest CVENN state. To setup cvx, open MATLAB in the cvx folder of this repository and run `cvx_setup` in MATLAB. 
 
@@ -64,7 +66,10 @@ Check other states against this witness
 
 ## Further work:
 
-The distance from the witness is an example of an entanglement measure of the state. Comparing how the analytical and numerical witness perform as such a measure could be an interesting project. Note that the numerical witness finds distance from the closest CVENN state, whereas the analytical witness finds distance from any state at the boundary. (Read paper for more details).
+The distance of a state from a CVENN witness is one of the ways in which entanglement of a state is quantified. Comparing how the analytical and numerical witness perform as such a measure could be an interesting project. Note that the numerical witness finds distance from the closest CVENN state, whereas the analytical witness finds distance from any state at the boundary. (Read paper for more details).
 
+## Contact:
+
+Please contact the author Mahathi Vempati at ```mahathi.vempati@research.iiit.ac.in``` for any queries, or discussion. 
 
 
