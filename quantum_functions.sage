@@ -1,5 +1,6 @@
 
 from variables import VariableGenerator
+import numpy
 
 # Pauli Matrices
 X = Matrix(QQbar, 2, 2, [0, 1, 1, 0])

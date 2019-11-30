@@ -16,7 +16,8 @@ The repository primarily contains codes to generate analytical and numerical wit
 Clone the repository:
 ```git clone https://github.com/Tinkidinki/cvenn-codes.git```
 
-## To generate an analytical witness 
+
+## To generate an optimal analytical witness 
 Open matlab in the same directory as all the files are present:
 
 To use functions in analytical witness file:
@@ -37,6 +38,11 @@ Check the state against the witness:
 ```check_witness(W_a, rho_s)```
 
 Test any other state against the witness to see if states inside CVENN give a positive value. 
+
+## Generate a non optimal analytical witness
+Using the `\rho_s` above, 
+
+```W_na = aw.non_optimal_witness(rho_s, d)```
 
 ## To generate a numerical witness
 Note that unlike the analytical witness which quickly finds solutions for large dimensions, the numerical witness takes a 
