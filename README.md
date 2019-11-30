@@ -46,7 +46,7 @@ We would have to use the `cvx` library to converge to the closest CVENN state. T
 
 Now open MATLAB in the root of the repository. To add all the functions in `cvxquad` to the MATLAB path, run:
 
-```addpath(cvxquad)```
+```addpath("cvxquad")```
 
 Once again, either define `rho_s`, the state you wish to separate from CVENN yourself, or generate a Werner like state. 
 
@@ -63,6 +63,12 @@ Check the state against the witness
 Check other states against this witness
 
 ```check_witness(W_n, x)```
+
+## Check the performance of your generated witnesses!
+If `w` is the generated witness,  and `d` is the dimensions, to see a graph of how your generated witness performs on Werner like states, 
+```wp = aw.witness_performance_on_werner(w,d)```
+
+Look at the graph of the actual quantum conditional entropy values vs the witness's output. 
 
 ## Further work:
 

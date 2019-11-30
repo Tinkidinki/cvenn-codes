@@ -29,11 +29,12 @@ function c = cvenn_werner_like(p, rho, d)
     c = trace(sigma*logm(sigma)) - trace(sigma_b*logm(sigma_b))
 end
 
-function w = witness(sigma, d)
+function w = witness(rho, d)
     % need to take care of log 0.
+    sigma = state_on_boundary(rho, d)
     I = eye(d)
     sigma_b = TrX(sigma, 1, [d,d]);
-    g = -logm(sigma) + kron(I, logm(sigma_b));
+    w = -logm(sigma) + kron(I, logm(sigma_b));
 end
     
 % function w = witness(rho, d)
@@ -79,13 +80,13 @@ end
 %                 disp("uh oh")
 %                 ans = -1
 
-function wp = witness_performance_on_werner(w, d):
+function wp = witness_performance_on_werner(w, d)
     prec = 100; % set precision, the higher this number is, the better - will take longer to compute though.
     p = zeros(1, prec);
     cond_entr = zeros(1, prec);  %The quantum conditional entropy
     wit_res = zeros(1, prec);  %The result of the witness
-    for i = 1:100
-        p(i) = i/100;
+    for i = 1:prec
+        p(i) = i/prec;
         rho = werner_like_state(p(i), d);
         cond_entr(i) = quantum_cond_entr(rho, [d d]);
         wit_res(i) = check_witness(w, rho);
@@ -94,6 +95,10 @@ function wp = witness_performance_on_werner(w, d):
     plot(p, cond_entr);
     hold on;
     plot(p, wit_res);
+
+    ax = gca;
+    ax.XAxisLocation = 'origin'
+    ax.YAxisLocation = 'origin'
     wp = 0;
 
 end
