@@ -4,7 +4,8 @@ function x = closest_cvenn_state_2_4(rho)
     
     cvx_begin 
         variable x(8,8) hermitian semidefinite
-        minimize norm(x-rho, 'fro')
+        %minimize norm(x-rho, 'fro')
+        minimize trace(sqrt((x - rho)'*(x - rho)))
         %maximize trace(x*rho)
         subject to 
             trace(x) == 1
