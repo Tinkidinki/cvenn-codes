@@ -92,13 +92,17 @@ function wp = witness_performance_on_werner(w, d)
         wit_res(i) = check_witness(w, rho);
     end
     
-    plot(p, cond_entr);
+    a1 = plot(p, cond_entr); M1 = "Conditional Entropy"
     hold on;
-    plot(p, wit_res);
-
+    a2 = plot(p, wit_res); M2 = "Value of $Tr(W \rho)$"
+    leg = legend([a1,a2], [M1, M2]);
+    set(leg, 'Interpreter', 'latex');
     ax = gca;
-    ax.XAxisLocation = 'origin'
-    ax.YAxisLocation = 'origin'
+    ax.XAxisLocation = 'origin';
+    ax.YAxisLocation = 'origin';
+    xlh = xlabel('$p$: Werner Mixing Parameter', 'interpreter', 'latex');
+    xlh.Position(2) = xlh.Position(2)-0.95;
+    xlh.Position(1) = xlh.Position(1)-0.3;
     wp = 0;
 
 end
