@@ -1,0 +1,17 @@
+attach("polarization_matrices.sage")
+denses
+HH
+a
+a = var('a')
+b = var('b')
+c = var('c')
+w = a*(HH + VV) + b*(VH + HV) + c*(DD + FF - RR - LL)
+W
+w
+attach("gellmann_matrices_trace_method.sage")
+w = get_witness(2.1704, 3.9069, -1.7365)
+w
+gell = convert_to_gellmann_basis(w)
+gell
+gell
+%hist -f cvenn_paper_sage_outputs

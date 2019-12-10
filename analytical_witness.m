@@ -7,6 +7,7 @@ function funs = analytical_witness
     funs.test = @testfun;
     funs.non_optimal_witness = @non_optimal_witness;
     funs.witness_performance_on_werner = @witness_performance_on_werner;
+    funs.witness_performance_on_isotropic = @witness_performance_on_isotropic;
 end
 
 % function g = grad(sigma)
@@ -34,7 +35,7 @@ function w = witness(rho, d)
     sigma = state_on_boundary(rho, d)
     I = eye(d)
     sigma_b = TrX(sigma, 1, [d,d]);
-    w = -logm(sigma) + kron(I, logm(sigma_b));
+    w = -logm(sigma)/log(2) + kron(I, logm(sigma_b)/log(2));
 end
     
 % function w = witness(rho, d)
@@ -65,7 +66,7 @@ end
 function w = non_optimal_witness(rho_s, d)
     I = eye(d)
     rho_sb = TrX(rho_s, 1, [d,d]);
-    w = -logm(rho_s) + kron(I, logm(rho_sb));
+    w = -logm(rho_s)/log(2) + kron(I, logm(rho_sb)/log(2));
 end
 
 
@@ -88,7 +89,7 @@ function wp = witness_performance_on_werner(w, d)
     for i = 1:prec
         p(i) = i/prec;
         rho = werner_like_state(p(i), d);
-        cond_entr(i) = quantum_cond_entr(rho, [d d]);
+        cond_entr(i) = quantum_cond_entr2(rho, d);
         wit_res(i) = check_witness(w, rho);
     end
     
@@ -104,6 +105,33 @@ function wp = witness_performance_on_werner(w, d)
     xlh.Position(2) = xlh.Position(2)-0.95;
     xlh.Position(1) = xlh.Position(1)-0.3;
     wp = 0;
+
+end
+
+function wi = witness_performance_on_isotropic(w, d)
+    prec = 100; % set precision, the higher this number is, the better - will take longer to compute though.
+    p = zeros(1, prec);
+    cond_entr = zeros(1, prec);  %The quantum conditional entropy
+    wit_res = zeros(1, prec);  %The result of the witness
+    for i = 1:prec
+        p(i) = -1/(d^2 - 1) + i/prec*(1 + 1/(d^2 - 1));
+        rho = werner_like_state(p(i), d);
+        cond_entr(i) = quantum_cond_entr2(rho, d);
+        wit_res(i) = check_witness(w, rho);
+    end
+    
+    a1 = plot(p, cond_entr); M1 = "Conditional Entropy"
+    hold on;
+    a2 = plot(p, wit_res); M2 = "Value of $Tr(W \rho)$"
+    leg = legend([a1,a2], [M1, M2]);
+    set(leg, 'Interpreter', 'latex');
+    ax = gca;
+    ax.XAxisLocation = 'origin';
+    ax.YAxisLocation = 'origin';
+    xlh = xlabel('$\alpha$: Isotropic Mixing Parameter', 'interpreter', 'latex');
+    xlh.Position(2) = xlh.Position(2)-0.95;
+    xlh.Position(1) = xlh.Position(1)-0.3;
+    wi = 0;
 
 end
 
