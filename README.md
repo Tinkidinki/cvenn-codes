@@ -18,7 +18,9 @@ Clone the repository:
 
 
 ## To generate an optimal analytical witness 
-Open matlab in the same directory as all the files are present:
+Open matlab in the same directory as all the files are present. If linux terminal is being used:
+
+```matlab -nodesktop```
 
 To use functions in analytical witness file:
 
