@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-01-08T06:33:44.447Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36" etag="wms-EOPbeLp_D_LQFqmE" version="12.4.9" type="github">
+<mxfile host="www.draw.io" modified="2020-01-08T06:46:28.075Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36" etag="bWLkD9hg8EAW-4E8aFsd" version="12.4.9" type="github">
   <diagram id="DesQzz0FUMzqTQDBwzYv" name="Page-1">
     <mxGraphModel dx="1102" dy="626" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
       <root>
@@ -19,11 +19,17 @@
             <mxPoint x="207" y="239" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="a4A_HweRNCj4ITvUPTM8-9" value="&lt;font style=&quot;font-size: 30px&quot;&gt;W&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="521" width="38" height="24" as="geometry"/>
+        <mxCell id="a4A_HweRNCj4ITvUPTM8-9" value="&lt;font style=&quot;font-size: 22px&quot;&gt;$$W$$&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="523" width="80" height="21" as="geometry"/>
         </mxCell>
         <mxCell id="a4A_HweRNCj4ITvUPTM8-10" value="&lt;b&gt;&lt;font style=&quot;font-size: 17px&quot;&gt;CVENN&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="375" y="294" width="70" height="19" as="geometry"/>
+          <mxGeometry x="376" y="294" width="70" height="19" as="geometry"/>
+        </mxCell>
+        <mxCell id="a4A_HweRNCj4ITvUPTM8-13" value="&lt;font style=&quot;font-size: 15px&quot;&gt;&lt;b&gt;ALL \(d \otimes d \) STATES&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="308" y="166.5" width="206" height="34" as="geometry"/>
+        </mxCell>
+        <mxCell id="a4A_HweRNCj4ITvUPTM8-14" value="&lt;font style=&quot;font-size: 15px&quot;&gt;&lt;b&gt;UNCERTAIN STATES&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="332" y="230" width="158" height="19" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
