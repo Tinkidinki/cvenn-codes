@@ -1,7 +1,9 @@
-# Characterization of Conditional Von Neumann Entropy
+# Witnessing Negative Conditional Entropy as an Operational Resource
 
+The paper
 This repository contains all the codes written in `MATLAB` used to generate results in the paper
-'Characterization of Conditional Von Neumann Entropy'  The pdf of the paper is available in the repository. 
+'Witnessing Negative Conditional Entropy as an Operational Resource'  The paper can be found [here](https://arxiv.org/abs/2001.11237).
+
 It also contains a few quantum functions useful for 2-qubit systems written in `sage`. 
 
 Functions from the following libraries have been used to write the functions in this repository. 
