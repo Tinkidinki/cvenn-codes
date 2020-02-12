@@ -1,6 +1,5 @@
 # Witnessing Negative Conditional Entropy as an Operational Resource
 
-The paper
 This repository contains all the codes written in `MATLAB` used to generate results in the paper
 'Witnessing Negative Conditional Entropy as an Operational Resource'  The paper can be found [here](https://arxiv.org/abs/2001.11237).
 
