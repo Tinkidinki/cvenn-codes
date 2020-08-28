@@ -79,11 +79,11 @@ If `w` is the generated witness,  and `d` is the dimensions, to see a graph of h
 
 Look at the graph of the actual quantum conditional entropy values vs the witness's output. 
 
-## Further work:
+## Further work
 
 The distance of a state from a CVENN witness is one of the ways in which entanglement of a state is quantified. Comparing how the analytical and numerical witness perform as such a measure could be an interesting project. Note that the numerical witness finds distance from the closest CVENN state, whereas the analytical witness finds distance from any state at the boundary. (Read paper for more details).
 
-## Contact:
+## Contact
 
 Please contact the author Mahathi Vempati at ```mahathi.vempati@research.iiit.ac.in``` for any queries, or discussion. 
 
