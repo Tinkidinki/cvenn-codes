@@ -57,7 +57,7 @@ function rho = werner_like_state(p,d)
     for i = 1:d 
         phi_plus_vector = phi_plus_vector + kron(I_d(:,i),I_d(:,i))
     end
-    phi_plus_matrix = kron(phi_plus_vector, phi_plus_vector')
+    phi_plus_matrix = kron(transpose(phi_plus_vector), phi_plus_vector)
     phi_plus_matrix = phi_plus_matrix/d
     rho = p*phi_plus_matrix + (1-p)*eye(d^2)/d^2
 end
@@ -66,7 +66,7 @@ end
 function w = non_optimal_witness(rho_s, d)
     I = eye(d)
     rho_sb = TrX(rho_s, 1, [d,d]);
-    w = -logm(rho_s)/log(2) + kron(I, logm(rho_sb)/log(2));
+    w = -logm(rho_s)+ kron(I, logm(rho_sb));
 end
 
 
@@ -93,9 +93,11 @@ function wp = witness_performance_on_werner(w, d)
         wit_res(i) = check_witness(w, rho);
     end
     
-    a1 = plot(p, cond_entr); M1 = "Conditional Entropy"
+    a1 = plot(p, cond_entr, '-'); M1 = "Conditional Entropy"
+    a1.LineWidth = 1.5
     hold on;
-    a2 = plot(p, wit_res); M2 = "Value of $Tr(W \rho)$"
+    a2 = plot(p, wit_res, '--'); M2 = "Value of $Tr(W \rho)$"
+    a2.LineWidth = 1.5
     leg = legend([a1,a2], [M1, M2]);
     set(leg, 'Interpreter', 'latex');
     ax = gca;
@@ -120,9 +122,11 @@ function wi = witness_performance_on_isotropic(w, d)
         wit_res(i) = check_witness(w, rho);
     end
     
-    a1 = plot(p, cond_entr); M1 = "Conditional Entropy"
+    a1 = plot(p, cond_entr, '-'); M1 = "Conditional Entropy"
+    a1.LineWidth = 1.5
     hold on;
-    a2 = plot(p, wit_res); M2 = "Value of $Tr(W \rho)$"
+    a2 = plot(p, wit_res, '--'); M2 = "Value of $Tr(W \rho)$"
+    a2.LineWidth = 1.5
     leg = legend([a1,a2], [M1, M2]);
     set(leg, 'Interpreter', 'latex');
     ax = gca;

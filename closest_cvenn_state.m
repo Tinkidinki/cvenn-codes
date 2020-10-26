@@ -5,8 +5,8 @@ n = 4;
 cvx_begin 
     variable x(4,4) hermitian semidefinite
     t = class(x)
-    %minimize norm(x-rho, 'fro')
-    minimize norm_nuc(x - rho)
+    minimize norm(x-rho, 'fro')
+    %minimize norm_nuc(x - rho) // Nuclear norm  - if you want to use trace distance
     %maximize trace(x*rho)
     subject to 
         trace(x) == 1

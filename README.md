@@ -11,6 +11,8 @@ Functions from the following libraries have been used to write the functions in 
 
 cvx and quantinf have already been added in this repository. Please follow the [cvxquad](https://github.com/hfawzi/cvxquad) link to find install instructions for that package. 
 
+You will also require the 'Optimization Toolbox' in MATLAB to run codes in this repository. 
+
 The repository primarily contains codes to generate analytical and numerical witnesses to separate a given state from the CVENN class. 
 
 Clone the repository:

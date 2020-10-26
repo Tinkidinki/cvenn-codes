@@ -37,8 +37,15 @@ def trace(M):
         trace += M[i][i]
     return trace
 
-def partial_trace(Q):
+def rho_a(Q):
     return  Matrix(SR, 2, 2, [Q[0][0]+Q[1][1], Q[0][2]+Q[1][3], Q[2][0]+Q[3][1], Q[2][2]+Q[3][3]])
+
+def rho_b(Q):
+    return Matrix(SR, 2, 2, [Q[0][0] + Q[2][2], Q[0][1] + Q[2][3], Q[1][0] + Q[3][2], Q[1][1] + Q[3][3]])
+
+def analytical_witness(rho):
+    return 
+
 
 def conditional_entropy(M):
     return entropy(M) - entropy(partial_trace(M))
@@ -167,6 +174,38 @@ def rho():
     m = matrix([[a[0], a[4] + I*a[5], a[6] + I*a[7], a[8] + I*a[9]],[a[4] - I*a[5], a[1], a[10] + I*a[11], a[12]+I*a[13]],[a[6] - I*a[7], a[10] - I*a[11], a[2], a[14] + I*a[15]],[a[8] - I*a[9], a[12] - I*a[13], a[14] - I*a[15], a[3]]])
     return m
 
+def unitary():
 
+    u00 = var('u00')
+    u01 = var('u01')
+    u02 = var('u02')
+    u03 = var('u03')
+
+    u10 = var('u10')
+    u11 = var('u11')
+    u12 = var('u12')
+    u13 = var('u13')
+
+    u20 = var('u20')
+    u21 = var('u21')
+    u22 = var('u22')
+    u23 = var('u23')
+
+    u30 = var('u30')
+    u31 = var('u31')
+    u32 = var('u32')
+    u33 = var('u33')
+
+    return matrix([[u00, u01, u02, u03],[u10, u11, u12, u13],[u20, u21, u22, u23],[u30, u31, u32, u33]])
+
+
+def log_matrix(M):
+    from scipy.linalg import logm
+    import numpy as np
+    M_np = np.matrix(M,dtype='float64')
+    return matrix(np.asmatrix(logm(M_np)))
+
+def witness(rho):
+    return -log_matrix(rho) + Identity2.tensor_product(log_matrix(rho_b(rho)))
 
 
