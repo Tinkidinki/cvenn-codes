@@ -1,0 +1,4790 @@
+
+analytical_witness        annotationddg_cb          
+analyzeCodeCompatibility  annotationMarkupCB        
+ancestor                  annotationMarkupRF        
+and                       anova1                    
+andrewsplot               anova2                    
+angle                     anovan                    
+animatedline              ans                       
+animationToFrame          ansaribradley             
+animinit                  any                       
+annotation                
+annotationddg             
+aw = analytical_witness
+
+funs = 
+
+  struct with fields:
+
+    cvenn_werner_like: @cvenn_werner_like
+
+
+aw = 
+
+  struct with fields:
+
+                   cvenn_werner_like: @cvenn_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+% TESTING FUNCTION: werner_like_state
+Id = werner_like_state(1, 2)
+{Undefined function 'werner_like_state' for input arguments of type
+'double'.
+} 
+Id = aw.werner_like_state(1, 2)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0
+     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+     1     0     0     1
+     0     0     0     0
+     0     0     0     0
+     1     0     0     1
+
+
+phi_plus_matrix =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+
+rho =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+
+Id =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+% The previous variable should've been phi_plus
+phi_plus = aw.werner_like_state(1, 2)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0
+     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+     1     0     0     1
+     0     0     0     0
+     0     0     0     0
+     1     0     0     1
+
+
+phi_plus_matrix =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+
+rho =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+
+phi_plus =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+id = aw.werner_like_state(0, 2)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0
+     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+     1     0     0     1
+     0     0     0     0
+     0     0     0     0
+     1     0     0     1
+
+
+phi_plus_matrix =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+
+rho =
+
+    0.2500         0         0         0
+         0    0.2500         0         0
+         0         0    0.2500         0
+         0         0         0    0.2500
+
+
+id =
+
+    0.2500         0         0         0
+         0    0.2500         0         0
+         0         0    0.2500         0
+         0         0         0    0.2500
+
+id3 = aw.werner_like_state(0, 3)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+     1     0     0     0     1     0     0     0     1
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     1     0     0     0     1     0     0     0     1
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     1     0     0     0     1     0     0     0     1
+
+
+phi_plus_matrix =
+
+  Columns 1 through 7
+
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+
+  Columns 8 through 9
+
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+
+
+rho =
+
+  Columns 1 through 7
+
+    0.1111         0         0         0         0         0         0
+         0    0.1111         0         0         0         0         0
+         0         0    0.1111         0         0         0         0
+         0         0         0    0.1111         0         0         0
+         0         0         0         0    0.1111         0         0
+         0         0         0         0         0    0.1111         0
+         0         0         0         0         0         0    0.1111
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+
+  Columns 8 through 9
+
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+    0.1111         0
+         0    0.1111
+
+
+id3 =
+
+  Columns 1 through 7
+
+    0.1111         0         0         0         0         0         0
+         0    0.1111         0         0         0         0         0
+         0         0    0.1111         0         0         0         0
+         0         0         0    0.1111         0         0         0
+         0         0         0         0    0.1111         0         0
+         0         0         0         0         0    0.1111         0
+         0         0         0         0         0         0    0.1111
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+
+  Columns 8 through 9
+
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+    0.1111         0
+         0    0.1111
+
+phi_plus3 = aw.werner_like_state(1, 3)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+     1     0     0     0     1     0     0     0     1
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     1     0     0     0     1     0     0     0     1
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     1     0     0     0     1     0     0     0     1
+
+
+phi_plus_matrix =
+
+  Columns 1 through 7
+
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+
+  Columns 8 through 9
+
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+
+
+rho =
+
+  Columns 1 through 7
+
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+
+  Columns 8 through 9
+
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+
+
+phi_plus3 =
+
+  Columns 1 through 7
+
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+
+  Columns 8 through 9
+
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+
+% DONE
+aw
+
+aw = 
+
+  struct with fields:
+
+                   cvenn_werner_like: @cvenn_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+I2 = 2*eye(d*d)
+{Unrecognized function or variable 'd'.
+} 
+I2 = 2*eye(4*4)
+
+I2 =
+
+  Columns 1 through 12
+
+     2     0     0     0     0     0     0     0     0     0     0     0
+     0     2     0     0     0     0     0     0     0     0     0     0
+     0     0     2     0     0     0     0     0     0     0     0     0
+     0     0     0     2     0     0     0     0     0     0     0     0
+     0     0     0     0     2     0     0     0     0     0     0     0
+     0     0     0     0     0     2     0     0     0     0     0     0
+     0     0     0     0     0     0     2     0     0     0     0     0
+     0     0     0     0     0     0     0     2     0     0     0     0
+     0     0     0     0     0     0     0     0     2     0     0     0
+     0     0     0     0     0     0     0     0     0     2     0     0
+     0     0     0     0     0     0     0     0     0     0     2     0
+     0     0     0     0     0     0     0     0     0     0     0     2
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+
+  Columns 13 through 16
+
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     2     0     0     0
+     0     2     0     0
+     0     0     2     0
+     0     0     0     2
+
+I2 = 2*eye(4)
+
+I2 =
+
+     2     0     0     0
+     0     2     0     0
+     0     0     2     0
+     0     0     0     2
+
+logm(I2)
+
+ans =
+
+    0.6931         0         0         0
+         0    0.6931         0         0
+         0         0    0.6931         0
+         0         0         0    0.6931
+
+logm(I2)/logm(2)
+
+ans =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+aw
+
+aw = 
+
+  struct with fields:
+
+                   cvenn_werner_like: @cvenn_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+aw = analytical_witness
+
+funs = 
+
+  struct with fields:
+
+    cvenn_werner_like: @cve_werner_like
+
+
+aw = 
+
+  struct with fields:
+
+                   cvenn_werner_like: @cve_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+% Testing cve_werner_like
+c_phi2 = aw.cvenn_werner_like(1, phi_plus, 2)
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+[Warning: Principal matrix logarithm is not defined for A with nonpositive
+real eigenvalues. A non-principal matrix logarithm is returned.] 
+[> In logm (line 63)
+In analytical_witness>cve_werner_like (line 29)] 
+
+c =
+
+   NaN
+
+
+c_phi2 =
+
+   NaN
+
+phi_plus
+
+phi_plus =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+p = 1
+
+p =
+
+     1
+
+rho = phi_plus
+
+rho =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+d = 2
+
+d =
+
+     2
+
+logm(phi_plus)
+[Warning: Principal matrix logarithm is not defined for A with nonpositive
+real eigenvalues. A non-principal matrix logarithm is returned.] 
+[> In logm (line 63)] 
+
+ans =
+
+   NaN   NaN   NaN   NaN
+   NaN   NaN   NaN   NaN
+   NaN   NaN   NaN   NaN
+   NaN   NaN   NaN   NaN
+
+eig(phi_plus)
+
+ans =
+
+     0
+     0
+     0
+     1
+
+
+No completions found.
+aw = analytical_witness
+
+funs = 
+
+  struct with fields:
+
+    cve_werner_like: @cve_werner_like
+
+
+aw = 
+
+  struct with fields:
+
+                     cve_werner_like: @cve_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+aw.cve_werner_like(0.99, phi_plus, 2)
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4975         0         0    0.4950
+         0    0.0025         0         0
+         0         0    0.0025         0
+    0.4950         0         0    0.4975
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    0.9244
+
+
+ans =
+
+    0.9244
+
+aw.cve_werner_like(0, phi_plus, 2)
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.2500         0         0         0
+         0    0.2500         0         0
+         0         0    0.2500         0
+         0         0         0    0.2500
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    -1
+
+
+ans =
+
+    -1
+
+aw = analytical_witness
+
+funs = 
+
+  struct with fields:
+
+    cve_werner_like: @cve_werner_like
+
+
+aw = 
+
+  struct with fields:
+
+                     cve_werner_like: @cve_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+aw.cve_werner_like(0.99, phi_plus, 2)
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4975         0         0    0.4950
+         0    0.0025         0         0
+         0         0    0.0025         0
+    0.4950         0         0    0.4975
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.9244
+
+
+ans =
+
+   -0.9244
+
+aw.cve_werner_like(0, phi_plus, 2)
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.2500         0         0         0
+         0    0.2500         0         0
+         0         0    0.2500         0
+         0         0         0    0.2500
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+     1
+
+
+ans =
+
+     1
+
+aw.cve_werner_like(0, phi_plus, 3)
+
+I =
+
+     1     0     0     0     0     0     0     0     0
+     0     1     0     0     0     0     0     0     0
+     0     0     1     0     0     0     0     0     0
+     0     0     0     1     0     0     0     0     0
+     0     0     0     0     1     0     0     0     0
+     0     0     0     0     0     1     0     0     0
+     0     0     0     0     0     0     1     0     0
+     0     0     0     0     0     0     0     1     0
+     0     0     0     0     0     0     0     0     1
+
+{Matrix dimensions must agree.
+
+Error in analytical_witness>cve_werner_like (line 31)
+    sigma = p*rho + (1-p)*I/d^2
+} 
+logm(0)
+[Warning: Principal matrix logarithm is not defined for A with nonpositive
+real eigenvalues. A non-principal matrix logarithm is returned.] 
+[> In logm (line 63)] 
+
+ans =
+
+  -Inf
+
+phi_plus = aw.werner_like_state(1, 3)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+     1     0     0     0     1     0     0     0     1
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     1     0     0     0     1     0     0     0     1
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     1     0     0     0     1     0     0     0     1
+
+
+phi_plus_matrix =
+
+  Columns 1 through 7
+
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+
+  Columns 8 through 9
+
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+
+
+rho =
+
+  Columns 1 through 7
+
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+
+  Columns 8 through 9
+
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+
+
+phi_plus =
+
+  Columns 1 through 7
+
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+
+  Columns 8 through 9
+
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+
+aw.cve_werner_like(0, phi_plus3, 3)
+
+I =
+
+     1     0     0     0     0     0     0     0     0
+     0     1     0     0     0     0     0     0     0
+     0     0     1     0     0     0     0     0     0
+     0     0     0     1     0     0     0     0     0
+     0     0     0     0     1     0     0     0     0
+     0     0     0     0     0     1     0     0     0
+     0     0     0     0     0     0     1     0     0
+     0     0     0     0     0     0     0     1     0
+     0     0     0     0     0     0     0     0     1
+
+
+sigma =
+
+  Columns 1 through 7
+
+    0.1111         0         0         0         0         0         0
+         0    0.1111         0         0         0         0         0
+         0         0    0.1111         0         0         0         0
+         0         0         0    0.1111         0         0         0
+         0         0         0         0    0.1111         0         0
+         0         0         0         0         0    0.1111         0
+         0         0         0         0         0         0    0.1111
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+
+  Columns 8 through 9
+
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+    0.1111         0
+         0    0.1111
+
+
+sigma_b =
+
+    0.3333         0         0
+         0    0.3333         0
+         0         0    0.3333
+
+
+c =
+
+    1.5850
+
+
+ans =
+
+    1.5850
+
+log(3)/log(2)
+
+ans =
+
+    1.5850
+
+phi_plus4 = aw.werner_like_state(1, 4)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+  Columns 1 through 12
+
+     1     0     0     0     0     1     0     0     0     0     1     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     1     0     0     0     0     1     0     0     0     0     1     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     1     0     0     0     0     1     0     0     0     0     1     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     1     0     0     0     0     1     0     0     0     0     1     0
+
+  Columns 13 through 16
+
+     0     0     0     1
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     1
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     1
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     1
+
+
+phi_plus_matrix =
+
+  Columns 1 through 7
+
+    0.2500         0         0         0         0    0.2500         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.2500         0         0         0         0    0.2500         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.2500         0         0         0         0    0.2500         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.2500         0         0         0         0    0.2500         0
+
+  Columns 8 through 14
+
+         0         0         0    0.2500         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0    0.2500         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0    0.2500         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0    0.2500         0         0         0
+
+  Columns 15 through 16
+
+         0    0.2500
+         0         0
+         0         0
+         0         0
+         0         0
+         0    0.2500
+         0         0
+         0         0
+         0         0
+         0         0
+         0    0.2500
+         0         0
+         0         0
+         0         0
+         0         0
+         0    0.2500
+
+
+rho =
+
+  Columns 1 through 7
+
+    0.2500         0         0         0         0    0.2500         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.2500         0         0         0         0    0.2500         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.2500         0         0         0         0    0.2500         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.2500         0         0         0         0    0.2500         0
+
+  Columns 8 through 14
+
+         0         0         0    0.2500         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0    0.2500         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0    0.2500         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0    0.2500         0         0         0
+
+  Columns 15 through 16
+
+         0    0.2500
+         0         0
+         0         0
+         0         0
+         0         0
+         0    0.2500
+         0         0
+         0         0
+         0         0
+         0         0
+         0    0.2500
+         0         0
+         0         0
+         0         0
+         0         0
+         0    0.2500
+
+
+phi_plus4 =
+
+  Columns 1 through 7
+
+    0.2500         0         0         0         0    0.2500         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.2500         0         0         0         0    0.2500         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.2500         0         0         0         0    0.2500         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.2500         0         0         0         0    0.2500         0
+
+  Columns 8 through 14
+
+         0         0         0    0.2500         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0    0.2500         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0    0.2500         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0    0.2500         0         0         0
+
+  Columns 15 through 16
+
+         0    0.2500
+         0         0
+         0         0
+         0         0
+         0         0
+         0    0.2500
+         0         0
+         0         0
+         0         0
+         0         0
+         0    0.2500
+         0         0
+         0         0
+         0         0
+         0         0
+         0    0.2500
+
+aw.cve_werner_like(0, phi_plus4, 4)
+
+I =
+
+  Columns 1 through 12
+
+     1     0     0     0     0     0     0     0     0     0     0     0
+     0     1     0     0     0     0     0     0     0     0     0     0
+     0     0     1     0     0     0     0     0     0     0     0     0
+     0     0     0     1     0     0     0     0     0     0     0     0
+     0     0     0     0     1     0     0     0     0     0     0     0
+     0     0     0     0     0     1     0     0     0     0     0     0
+     0     0     0     0     0     0     1     0     0     0     0     0
+     0     0     0     0     0     0     0     1     0     0     0     0
+     0     0     0     0     0     0     0     0     1     0     0     0
+     0     0     0     0     0     0     0     0     0     1     0     0
+     0     0     0     0     0     0     0     0     0     0     1     0
+     0     0     0     0     0     0     0     0     0     0     0     1
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+
+  Columns 13 through 16
+
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+  Columns 1 through 7
+
+    0.0625         0         0         0         0         0         0
+         0    0.0625         0         0         0         0         0
+         0         0    0.0625         0         0         0         0
+         0         0         0    0.0625         0         0         0
+         0         0         0         0    0.0625         0         0
+         0         0         0         0         0    0.0625         0
+         0         0         0         0         0         0    0.0625
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+
+  Columns 8 through 14
+
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.0625         0         0         0         0         0         0
+         0    0.0625         0         0         0         0         0
+         0         0    0.0625         0         0         0         0
+         0         0         0    0.0625         0         0         0
+         0         0         0         0    0.0625         0         0
+         0         0         0         0         0    0.0625         0
+         0         0         0         0         0         0    0.0625
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+
+  Columns 15 through 16
+
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+         0         0
+    0.0625         0
+         0    0.0625
+
+
+sigma_b =
+
+    0.2500         0         0         0
+         0    0.2500         0         0
+         0         0    0.2500         0
+         0         0         0    0.2500
+
+
+c =
+
+     2
+
+
+ans =
+
+     2
+
+aw.cve_werner_like(0.999, phi_plus4, 4)
+
+I =
+
+  Columns 1 through 12
+
+     1     0     0     0     0     0     0     0     0     0     0     0
+     0     1     0     0     0     0     0     0     0     0     0     0
+     0     0     1     0     0     0     0     0     0     0     0     0
+     0     0     0     1     0     0     0     0     0     0     0     0
+     0     0     0     0     1     0     0     0     0     0     0     0
+     0     0     0     0     0     1     0     0     0     0     0     0
+     0     0     0     0     0     0     1     0     0     0     0     0
+     0     0     0     0     0     0     0     1     0     0     0     0
+     0     0     0     0     0     0     0     0     1     0     0     0
+     0     0     0     0     0     0     0     0     0     1     0     0
+     0     0     0     0     0     0     0     0     0     0     1     0
+     0     0     0     0     0     0     0     0     0     0     0     1
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0
+
+  Columns 13 through 16
+
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+  Columns 1 through 7
+
+    0.2498         0         0         0         0    0.2497         0
+         0    0.0001         0         0         0         0         0
+         0         0    0.0001         0         0         0         0
+         0         0         0    0.0001         0         0         0
+         0         0         0         0    0.0001         0         0
+    0.2497         0         0         0         0    0.2498         0
+         0         0         0         0         0         0    0.0001
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.2497         0         0         0         0    0.2497         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.2497         0         0         0         0    0.2497         0
+
+  Columns 8 through 14
+
+         0         0         0    0.2497         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0    0.2497         0         0         0
+         0         0         0         0         0         0         0
+    0.0001         0         0         0         0         0         0
+         0    0.0001         0         0         0         0         0
+         0         0    0.0001         0         0         0         0
+         0         0         0    0.2498         0         0         0
+         0         0         0         0    0.0001         0         0
+         0         0         0         0         0    0.0001         0
+         0         0         0         0         0         0    0.0001
+         0         0         0         0         0         0         0
+         0         0         0    0.2497         0         0         0
+
+  Columns 15 through 16
+
+         0    0.2497
+         0         0
+         0         0
+         0         0
+         0         0
+         0    0.2497
+         0         0
+         0         0
+         0         0
+         0         0
+         0    0.2497
+         0         0
+         0         0
+         0         0
+    0.0001         0
+         0    0.2498
+
+
+sigma_b =
+
+    0.2500         0         0         0
+         0    0.2500         0         0
+         0         0    0.2500         0
+         0         0         0    0.2500
+
+
+c =
+
+   -1.9856
+
+
+ans =
+
+   -1.9856
+
+% cve_werner_like has been tested
+aw
+
+aw = 
+
+  struct with fields:
+
+                     cve_werner_like: @cve_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+phi_plus = aw.werner_like_state(1, 2)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0
+     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+     1     0     0     1
+     0     0     0     0
+     0     0     0     0
+     1     0     0     1
+
+
+phi_plus_matrix =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+
+rho =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+
+phi_plus =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+% TESTING state_on_boundary
+sigma = aw.state_on_boundary(phi_plus, 2)
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.2750         0         0    0.0500
+         0    0.2250         0         0
+         0         0    0.2250         0
+    0.0500         0         0    0.2750
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    0.9796
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.2750         0         0    0.0500
+         0    0.2250         0         0
+         0         0    0.2250         0
+    0.0500         0         0    0.2750
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    0.9796
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.5250         0         0    0.5500
+         0   -0.0250         0         0
+         0         0   -0.0250         0
+    0.5500         0         0    0.5250
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+[Warning: Principal matrix logarithm is not defined for A with nonpositive
+real eigenvalues. A non-principal matrix logarithm is returned.] 
+[> In logm (line 63)
+In analytical_witness>cve_werner_like (line 36)
+In analytical_witness>@(p)cve_werner_like(p,rho,d) (line 56)
+In trustnleqn (line 210)
+In fsolve (line 434)
+In analytical_witness>state_on_boundary (line 56)] 
+
+c =
+
+  -1.5113 + 0.3399i
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.3375         0         0    0.1750
+         0    0.1625         0         0
+         0         0    0.1625         0
+    0.1750         0         0    0.3375
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    0.7722
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.3375         0         0    0.1750
+         0    0.1625         0         0
+         0         0    0.1625         0
+    0.1750         0         0    0.3375
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    0.7722
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4928         0         0    0.4857
+         0    0.0072         0         0
+         0         0    0.0072         0
+    0.4857         0         0    0.4928
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.8162
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.3763         0         0    0.2527
+         0    0.1237         0         0
+         0         0    0.1237         0
+    0.2527         0         0    0.3763
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    0.5395
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.3763         0         0    0.2527
+         0    0.1237         0         0
+         0         0    0.1237         0
+    0.2527         0         0    0.3763
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    0.5395
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4530         0         0    0.4059
+         0    0.0470         0         0
+         0         0    0.0470         0
+    0.4059         0         0    0.4530
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.1892
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4530         0         0    0.4059
+         0    0.0470         0         0
+         0         0    0.0470         0
+    0.4059         0         0    0.4530
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.1892
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4379         0         0    0.3758
+         0    0.0621         0         0
+         0         0    0.0621         0
+    0.3758         0         0    0.4379
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.0112
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4379         0         0    0.3758
+         0    0.0621         0         0
+         0         0    0.0621         0
+    0.3758         0         0    0.4379
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.0112
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -4.3154e-05
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -4.3195e-05
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -6.4591e-10
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -4.1813e-08
+
+
+Equation solved.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the function tolerance, and
+the problem appears regular as measured by the gradient.
+
+
+p =
+
+    0.7476
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+aw.cve_werner_like(0.7476, phi_plus, 2)
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   3.8217e-05
+
+
+ans =
+
+   3.8217e-05
+
+aw.werner_like_state(0.7476, 2)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0
+     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+     1     0     0     1
+     0     0     0     0
+     0     0     0     0
+     1     0     0     1
+
+
+phi_plus_matrix =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+
+rho =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+ans =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+% Tested that it lies on the boundary: found the CVE of the state
+% Tested that it lies on the line: input the p value into werner_like_state function. 
+
+aw
+
+aw = 
+
+  struct with fields:
+
+                     cve_werner_like: @cve_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+% Testing non_optimal_witness
+% Unfortunately, this was written using log to the base e rather than 2. 
+% Am now testing all functions from paper to see if I did them base e. 
+rho_iso = aw.werner_like_state(0.8, 3)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+     1     0     0     0     1     0     0     0     1
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     1     0     0     0     1     0     0     0     1
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     1     0     0     0     1     0     0     0     1
+
+
+phi_plus_matrix =
+
+  Columns 1 through 7
+
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+
+  Columns 8 through 9
+
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+
+
+rho =
+
+  Columns 1 through 7
+
+    0.2889         0         0         0    0.2667         0         0
+         0    0.0222         0         0         0         0         0
+         0         0    0.0222         0         0         0         0
+         0         0         0    0.0222         0         0         0
+    0.2667         0         0         0    0.2889         0         0
+         0         0         0         0         0    0.0222         0
+         0         0         0         0         0         0    0.0222
+         0         0         0         0         0         0         0
+    0.2667         0         0         0    0.2667         0         0
+
+  Columns 8 through 9
+
+         0    0.2667
+         0         0
+         0         0
+         0         0
+         0    0.2667
+         0         0
+         0         0
+    0.0222         0
+         0    0.2889
+
+
+rho_iso =
+
+  Columns 1 through 7
+
+    0.2889         0         0         0    0.2667         0         0
+         0    0.0222         0         0         0         0         0
+         0         0    0.0222         0         0         0         0
+         0         0         0    0.0222         0         0         0
+    0.2667         0         0         0    0.2889         0         0
+         0         0         0         0         0    0.0222         0
+         0         0         0         0         0         0    0.0222
+         0         0         0         0         0         0         0
+    0.2667         0         0         0    0.2667         0         0
+
+  Columns 8 through 9
+
+         0    0.2667
+         0         0
+         0         0
+         0         0
+         0    0.2667
+         0         0
+         0         0
+    0.0222         0
+         0    0.2889
+
+w_iso = aw.non_optimal_witness(rho_iso, 3)
+
+I =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+
+w_iso =
+
+  Columns 1 through 7
+
+    1.5044         0         0         0   -1.2036    0.0000   -0.0000
+         0    2.7081         0         0         0         0         0
+         0         0    2.7081         0         0         0         0
+         0         0         0    2.7081         0         0         0
+   -1.2036         0         0         0    1.5044   -0.0000    0.0000
+    0.0000         0         0         0   -0.0000    2.7081    0.0000
+   -0.0000         0         0         0    0.0000    0.0000    2.7081
+   -0.0000         0         0         0   -0.0000    0.0000   -0.0000
+   -1.2036         0         0         0   -1.2036   -0.0000         0
+
+  Columns 8 through 9
+
+   -0.0000   -1.2036
+         0         0
+         0         0
+         0         0
+   -0.0000   -1.2036
+    0.0000   -0.0000
+   -0.0000         0
+    2.7081    0.0000
+    0.0000    1.5044
+
+rho_iso = aw.werner_like_state(0.8, 3)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+     1
+     0
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+     1     0     0     0     1     0     0     0     1
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     1     0     0     0     1     0     0     0     1
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0
+     1     0     0     0     1     0     0     0     1
+
+
+phi_plus_matrix =
+
+  Columns 1 through 7
+
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+         0         0         0         0         0         0         0
+    0.3333         0         0         0    0.3333         0         0
+
+  Columns 8 through 9
+
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+         0         0
+         0         0
+         0         0
+         0    0.3333
+
+
+rho =
+
+  Columns 1 through 7
+
+    0.2889         0         0         0    0.2667         0         0
+         0    0.0222         0         0         0         0         0
+         0         0    0.0222         0         0         0         0
+         0         0         0    0.0222         0         0         0
+    0.2667         0         0         0    0.2889         0         0
+         0         0         0         0         0    0.0222         0
+         0         0         0         0         0         0    0.0222
+         0         0         0         0         0         0         0
+    0.2667         0         0         0    0.2667         0         0
+
+  Columns 8 through 9
+
+         0    0.2667
+         0         0
+         0         0
+         0         0
+         0    0.2667
+         0         0
+         0         0
+    0.0222         0
+         0    0.2889
+
+
+rho_iso =
+
+  Columns 1 through 7
+
+    0.2889         0         0         0    0.2667         0         0
+         0    0.0222         0         0         0         0         0
+         0         0    0.0222         0         0         0         0
+         0         0         0    0.0222         0         0         0
+    0.2667         0         0         0    0.2889         0         0
+         0         0         0         0         0    0.0222         0
+         0         0         0         0         0         0    0.0222
+         0         0         0         0         0         0         0
+    0.2667         0         0         0    0.2667         0         0
+
+  Columns 8 through 9
+
+         0    0.2667
+         0         0
+         0         0
+         0         0
+         0    0.2667
+         0         0
+         0         0
+    0.0222         0
+         0    0.2889
+
+aw = analytical_witness
+
+funs = 
+
+  struct with fields:
+
+    cve_werner_like: @cve_werner_like
+
+
+aw = 
+
+  struct with fields:
+
+                     cve_werner_like: @cve_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+w_iso = aw.non_optimal_witness(rho_iso, 3)
+
+I =
+
+     1     0     0
+     0     1     0
+     0     0     1
+
+
+w_iso =
+
+  Columns 1 through 7
+
+    2.1704         0         0         0   -1.7365    0.0000   -0.0000
+         0    3.9069         0         0         0         0         0
+         0         0    3.9069         0         0         0         0
+         0         0         0    3.9069         0         0         0
+   -1.7365         0         0         0    2.1704   -0.0000    0.0000
+    0.0000         0         0         0   -0.0000    3.9069    0.0000
+   -0.0000         0         0         0    0.0000    0.0000    3.9069
+   -0.0000         0         0         0   -0.0000    0.0000   -0.0000
+   -1.7365         0         0         0   -1.7365   -0.0000         0
+
+  Columns 8 through 9
+
+   -0.0000   -1.7365
+         0         0
+         0         0
+         0         0
+   -0.0000   -1.7365
+    0.0000   -0.0000
+   -0.0000         0
+    3.9069    0.0000
+    0.0000    2.1704
+
+aw
+
+aw = 
+
+  struct with fields:
+
+                     cve_werner_like: @cve_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+rho_s = aw.werner_like_state(0.8, 2)
+
+phi_plus_vector =
+
+     0
+     0
+     0
+     0
+
+
+I_d =
+
+     1     0
+     0     1
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     0
+
+
+phi_plus_vector =
+
+     1
+     0
+     0
+     1
+
+
+phi_plus_matrix =
+
+     1     0     0     1
+     0     0     0     0
+     0     0     0     0
+     1     0     0     1
+
+
+phi_plus_matrix =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+
+rho =
+
+    0.4500         0         0    0.4000
+         0    0.0500         0         0
+         0         0    0.0500         0
+    0.4000         0         0    0.4500
+
+
+rho_s =
+
+    0.4500         0         0    0.4000
+         0    0.0500         0         0
+         0         0    0.0500         0
+    0.4000         0         0    0.4500
+
+wn = aw.non_optimal_witness(rho_s, 2)
+
+I =
+
+     1     0
+     0     1
+
+
+wn =
+
+    1.2782         0         0   -2.0437
+         0    3.3219         0         0
+         0         0    3.3219         0
+   -2.0437         0         0    1.2782
+
+check_witness(wn, rho_s)
+
+ans =
+
+   -0.1524
+
+
+ans =
+
+   -0.1524
+
+phi_plus
+
+phi_plus =
+
+    0.5000         0         0    0.5000
+         0         0         0         0
+         0         0         0         0
+    0.5000         0         0    0.5000
+
+aw.cve_werner_like(0.8, phi_plus, 2)
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4500         0         0    0.4000
+         0    0.0500         0         0
+         0         0    0.0500         0
+    0.4000         0         0    0.4500
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.1524
+
+
+ans =
+
+   -0.1524
+
+% So testing a state against a witness created using the same state gives conditional entropy as expected. 
+check_witness(wn, phi_plus)
+
+ans =
+
+   -0.7655
+
+
+ans =
+
+   -0.7655
+
+check_witness(wn, Id)
+
+ans =
+
+   -0.7655
+
+
+ans =
+
+   -0.7655
+
+check_witness(wn, eye(4)/4)
+
+ans =
+
+    2.3001
+
+
+ans =
+
+    2.3001
+
+% non_optimal_witness tested
+
+aw
+
+aw = 
+
+  struct with fields:
+
+                     cve_werner_like: @cve_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+aw.witness(rho_s, 2)
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.2700         0         0    0.0400
+         0    0.2300         0         0
+         0         0    0.2300         0
+    0.0400         0         0    0.2700
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    0.9868
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.2700         0         0    0.0400
+         0    0.2300         0         0
+         0         0    0.2300         0
+    0.0400         0         0    0.2700
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    0.9868
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4700         0         0    0.4400
+         0    0.0300         0         0
+         0         0    0.0300         0
+    0.4400         0         0    0.4700
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.4209
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4700         0         0    0.4400
+         0    0.0300         0         0
+         0         0    0.0300         0
+    0.4400         0         0    0.4700
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.4209
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4415         0         0    0.3830
+         0    0.0585         0         0
+         0         0    0.0585         0
+    0.3830         0         0    0.4415
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.0517
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4415         0         0    0.3830
+         0    0.0585         0         0
+         0         0    0.0585         0
+    0.3830         0         0    0.4415
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.0517
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4370         0         0    0.3740
+         0    0.0630         0         0
+         0         0    0.0630         0
+    0.3740         0         0    0.4370
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -8.9746e-04
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4370         0         0    0.3740
+         0    0.0630         0         0
+         0         0    0.0630         0
+    0.3740         0         0    0.4370
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -8.9749e-04
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -2.7887e-07
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -3.1180e-07
+
+
+Equation solved.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the function tolerance, and
+the problem appears regular as measured by the gradient.
+
+
+p =
+
+    0.9345
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+I =
+
+     1     0
+     0     1
+
+
+ans =
+
+    1.1445         0         0   -1.8418
+         0    2.9863         0         0
+         0         0    2.9863         0
+   -1.8418         0         0    1.1445
+
+wo = aw.witness(rho_s, 2)
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.2700         0         0    0.0400
+         0    0.2300         0         0
+         0         0    0.2300         0
+    0.0400         0         0    0.2700
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    0.9868
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.2700         0         0    0.0400
+         0    0.2300         0         0
+         0         0    0.2300         0
+    0.0400         0         0    0.2700
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+    0.9868
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4700         0         0    0.4400
+         0    0.0300         0         0
+         0         0    0.0300         0
+    0.4400         0         0    0.4700
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.4209
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4700         0         0    0.4400
+         0    0.0300         0         0
+         0         0    0.0300         0
+    0.4400         0         0    0.4700
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.4209
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4415         0         0    0.3830
+         0    0.0585         0         0
+         0         0    0.0585         0
+    0.3830         0         0    0.4415
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.0517
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4415         0         0    0.3830
+         0    0.0585         0         0
+         0         0    0.0585         0
+    0.3830         0         0    0.4415
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+   -0.0517
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4370         0         0    0.3740
+         0    0.0630         0         0
+         0         0    0.0630         0
+    0.3740         0         0    0.4370
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -8.9746e-04
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4370         0         0    0.3740
+         0    0.0630         0         0
+         0         0    0.0630         0
+    0.3740         0         0    0.4370
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -8.9749e-04
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -2.7887e-07
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+c =
+
+  -3.1180e-07
+
+
+Equation solved.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the function tolerance, and
+the problem appears regular as measured by the gradient.
+
+
+p =
+
+    0.9345
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+I =
+
+     1     0
+     0     1
+
+
+wo =
+
+    1.1445         0         0   -1.8418
+         0    2.9863         0         0
+         0         0    2.9863         0
+   -1.8418         0         0    1.1445
+
+check_witness(wo, rho_s)
+
+ans =
+
+   -0.1447
+
+
+ans =
+
+   -0.1447
+
+quantum_cond_entr2(phi_plus, 2)
+
+Term1 =
+
+     0
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+    -1
+
+
+ans =
+
+    -1
+
+quantum_cond_entr(phi_plus, 2)
+{Unrecognized function or variable 'quantum_cond_entr'.
+} 
+quantum_cond_entr2(phi_plus, 2)
+
+Term1 =
+
+     0
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+    -1
+
+
+ans =
+
+    -1
+
+quantum_cond_entr2(eye(4)/4, 2))
+ quantum_cond_entr2(eye(4)/4, 2))
+                                |
+{Error: Invalid expression. When calling a function or indexing a variable,
+use parentheses. Otherwise, check for mismatched delimiters.
+} 
+quantum_cond_entr2(eye(4)/4, 2)
+
+Term1 =
+
+   -0.5000
+
+
+Term1 =
+
+    -1
+
+
+Term1 =
+
+   -1.5000
+
+
+Term1 =
+
+    -2
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+     1
+
+
+ans =
+
+     1
+
+aw = analytical_witness
+
+funs = 
+
+  struct with fields:
+
+    cve_werner_like: @cve_werner_like
+
+
+aw = 
+
+  struct with fields:
+
+                     cve_werner_like: @cve_werner_like
+                   state_on_boundary: @state_on_boundary
+                             witness: @witness
+                   werner_like_state: @werner_like_state
+                                test: @testfun
+                 non_optimal_witness: @non_optimal_witness
+       witness_performance_on_werner: @witness_performance_on_werner
+    witness_performance_on_isotropic: @witness_performance_on_isotropic
+
+aw.state_on_boundary(phi_plus, 2)
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.2750         0         0    0.0500
+         0    0.2250         0         0
+         0         0    0.2250         0
+    0.0500         0         0    0.2750
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.4842
+
+
+Term1 =
+
+   -0.9684
+
+
+Term1 =
+
+   -1.4526
+
+
+Term1 =
+
+   -1.9796
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+    0.9796
+
+
+c =
+
+    0.9796
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.2750         0         0    0.0500
+         0    0.2250         0         0
+         0         0    0.2250         0
+    0.0500         0         0    0.2750
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.4842
+
+
+Term1 =
+
+   -0.9684
+
+
+Term1 =
+
+   -1.4526
+
+
+Term1 =
+
+   -1.9796
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+    0.9796
+
+
+c =
+
+    0.9796
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.5250         0         0    0.5500
+         0   -0.0250         0         0
+         0         0   -0.0250         0
+    0.5500         0         0    0.5250
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   0.1330 - 0.1133i
+
+
+Term1 =
+
+   0.2661 - 0.2266i
+
+
+Term1 =
+
+   0.3991 - 0.3399i
+
+
+Term1 =
+
+   0.5113 - 0.3399i
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+  -1.5113 + 0.3399i
+
+
+c =
+
+  -1.5113 + 0.3399i
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.3375         0         0    0.1750
+         0    0.1625         0         0
+         0         0    0.1625         0
+    0.1750         0         0    0.3375
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.4260
+
+
+Term1 =
+
+   -0.8520
+
+
+Term1 =
+
+   -1.2780
+
+
+Term1 =
+
+   -1.7722
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+    0.7722
+
+
+c =
+
+    0.7722
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.3375         0         0    0.1750
+         0    0.1625         0         0
+         0         0    0.1625         0
+    0.1750         0         0    0.3375
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.4260
+
+
+Term1 =
+
+   -0.8520
+
+
+Term1 =
+
+   -1.2780
+
+
+Term1 =
+
+   -1.7722
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+    0.7722
+
+
+c =
+
+    0.7722
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4928         0         0    0.4857
+         0    0.0072         0         0
+         0         0    0.0072         0
+    0.4857         0         0    0.4928
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.0511
+
+
+Term1 =
+
+   -0.1021
+
+
+Term1 =
+
+   -0.1532
+
+
+Term1 =
+
+   -0.1838
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+   -0.8162
+
+
+c =
+
+   -0.8162
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.3763         0         0    0.2527
+         0    0.1237         0         0
+         0         0    0.1237         0
+    0.2527         0         0    0.3763
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.3729
+
+
+Term1 =
+
+   -0.7458
+
+
+Term1 =
+
+   -1.1187
+
+
+Term1 =
+
+   -1.5395
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+    0.5395
+
+
+c =
+
+    0.5395
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.3763         0         0    0.2527
+         0    0.1237         0         0
+         0         0    0.1237         0
+    0.2527         0         0    0.3763
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.3729
+
+
+Term1 =
+
+   -0.7458
+
+
+Term1 =
+
+   -1.1187
+
+
+Term1 =
+
+   -1.5395
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+    0.5395
+
+
+c =
+
+    0.5395
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4530         0         0    0.4059
+         0    0.0470         0         0
+         0         0    0.0470         0
+    0.4059         0         0    0.4530
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.2074
+
+
+Term1 =
+
+   -0.4149
+
+
+Term1 =
+
+   -0.6223
+
+
+Term1 =
+
+   -0.8108
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+   -0.1892
+
+
+c =
+
+   -0.1892
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4530         0         0    0.4059
+         0    0.0470         0         0
+         0         0    0.0470         0
+    0.4059         0         0    0.4530
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.2074
+
+
+Term1 =
+
+   -0.4149
+
+
+Term1 =
+
+   -0.6223
+
+
+Term1 =
+
+   -0.8108
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+   -0.1892
+
+
+c =
+
+   -0.1892
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4379         0         0    0.3758
+         0    0.0621         0         0
+         0         0    0.0621         0
+    0.3758         0         0    0.4379
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.2489
+
+
+Term1 =
+
+   -0.4979
+
+
+Term1 =
+
+   -0.7468
+
+
+Term1 =
+
+   -0.9888
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+   -0.0112
+
+
+c =
+
+   -0.0112
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4379         0         0    0.3758
+         0    0.0621         0         0
+         0         0    0.0621         0
+    0.3758         0         0    0.4379
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.2489
+
+
+Term1 =
+
+   -0.4979
+
+
+Term1 =
+
+   -0.7468
+
+
+Term1 =
+
+   -0.9888
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+   -0.0112
+
+
+c =
+
+   -0.0112
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.2515
+
+
+Term1 =
+
+   -0.5030
+
+
+Term1 =
+
+   -0.7545
+
+
+Term1 =
+
+   -1.0000
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+  -4.3154e-05
+
+
+c =
+
+  -4.3154e-05
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.2515
+
+
+Term1 =
+
+   -0.5030
+
+
+Term1 =
+
+   -0.7545
+
+
+Term1 =
+
+   -1.0000
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+  -4.3195e-05
+
+
+c =
+
+  -4.3195e-05
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.2515
+
+
+Term1 =
+
+   -0.5030
+
+
+Term1 =
+
+   -0.7546
+
+
+Term1 =
+
+   -1.0000
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+  -6.4603e-10
+
+
+c =
+
+  -6.4603e-10
+
+
+I =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+sigma_b =
+
+    0.5000         0
+         0    0.5000
+
+
+Term1 =
+
+   -0.2515
+
+
+Term1 =
+
+   -0.5030
+
+
+Term1 =
+
+   -0.7546
+
+
+Term1 =
+
+   -1.0000
+
+
+Term2 =
+
+   -0.5000
+
+
+Term2 =
+
+    -1
+
+
+cond_entr =
+
+  -4.1813e-08
+
+
+c =
+
+  -4.1813e-08
+
+
+Equation solved.
+
+fsolve completed because the vector of function values is near zero
+as measured by the value of the function tolerance, and
+the problem appears regular as measured by the gradient.
+
+
+p =
+
+    0.7476
+
+
+sigma =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+
+
+ans =
+
+    0.4369         0         0    0.3738
+         0    0.0631         0         0
+         0         0    0.0631         0
+    0.3738         0         0    0.4369
+

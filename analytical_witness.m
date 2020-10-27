@@ -1,7 +1,6 @@
 function funs = analytical_witness
-    funs.cvenn_werner_like = @cvenn_werner_like
+    funs.cve_werner_like = @cve_werner_like
     funs.state_on_boundary = @state_on_boundary;
-    % funs.grad = @grad;
     funs.witness = @witness;
     funs.werner_like_state = @werner_like_state;
     funs.test = @testfun;
@@ -10,48 +9,37 @@ function funs = analytical_witness
     funs.witness_performance_on_isotropic = @witness_performance_on_isotropic;
 end
 
-% function g = grad(sigma)
-% % need to take care of log 0.
-%     I = [1 0; 0 1];
-%     sigma_b = TrX(sigma, 1, [2,2]);
-%     g = transpose(logm(sigma) - kron(I, logm(sigma_b)));
-% end
+% All logarithms have been taken to the base 2 for calculation of entropy. 
+% That is, we take logm/log2
 
-% function w = witness(sigma)
-%     g = grad(sigma);
-%     I = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1];
-%     w = (trace(sigma*g)*I - g)/(sqrt(trace(g)^2));
-% end
 
-function c = cvenn_werner_like(p, rho, d)
+function c = cve_werner_like(p, rho, d)
+% Generates a state of the form p*rho + (1-p)*I/d^2
+% The conditional von Neumann entropy of the generated state is returned. 
     I = eye(d*d)
     sigma = p*rho + (1-p)*I/d^2
-    sigma_b = TrX(sigma, 1, [d,d])
-    c = trace(sigma*logm(sigma)) - trace(sigma_b*logm(sigma_b))
+    c = quantum_cond_entr2(sigma, d)
 end
 
 function w = witness(rho, d)
-    % need to take care of log 0.
+    % Finds the "state on boundary" for the given state
+    % Calculates the witness using that state as the parameter
     sigma = state_on_boundary(rho, d)
     I = eye(d)
     sigma_b = TrX(sigma, 1, [d,d]);
     w = -logm(sigma)/log(2) + kron(I, logm(sigma_b)/log(2));
 end
     
-% function w = witness(rho, d)
-%     sigma = state_on_boundary(rho, d)
-%     g = grad(sigma, d);
-%     I = eye(d*d);
-%     w = (trace(sigma*g)*I - g)/(sqrt(trace(g)^2));
-% end
 
 function sigma = state_on_boundary(rho, d)
-    p = fsolve(@(p)cvenn_werner_like(p, rho, d), 0.1)
+% Returns a state that lies on the line p*rho + (1-p)*I/d^2 and on the boundary of CVENN
+    p = fsolve(@(p)cve_werner_like(p, rho, d), 0.1)
     % sigma = p
     sigma = p*rho + (1-p)*eye(d^2)/d^2
 end
 
 function rho = werner_like_state(p,d)
+% Returns a state of the form (p*|phi+><phi+| + (1-p)I/d^2) where d is the number of qubits the state is defined over, and phi+ is the Bell state generalised to higher dimensions (defined in the paper)
     phi_plus_vector = zeros(d^2,1)
     I_d = eye(d)
     for i = 1:d 
@@ -62,26 +50,17 @@ function rho = werner_like_state(p,d)
     rho = p*phi_plus_matrix + (1-p)*eye(d^2)/d^2
 end
 
-% No, need to change, has been written correctly.
 function w = non_optimal_witness(rho_s, d)
+% Prepares a witness by substituting the state rho_s in the witness formula. This witness may not be optimal. 
     I = eye(d)
     rho_sb = TrX(rho_s, 1, [d,d]);
-    w = -logm(rho_s)+ kron(I, logm(rho_sb));
+    w = -logm(rho_s)/logm(2)+ kron(I, logm(rho_sb)/logm(2));
 end
 
-
-% function ans = testfun(d)
-%     ans = 0
-%     for i = 1:100
-%         rho = randRho(d*d)
-%         if quantum_cond_entr(rho, [d d]) < 0:
-%             disp(i);
-%             w = witness(rho, d)
-%             if check_witness(w, rho) >= 0:
-%                 disp("uh oh")
-%                 ans = -1
-
 function wp = witness_performance_on_werner(w, d)
+% Generates Werner states on the line p|phi+><phi+| + (1-p)I/d^2
+% Finds the expectation of each state against the witness and plots this. 
+% The actual value of conditional entropy is also plotted. 
     prec = 100; % set precision, the higher this number is, the better - will take longer to compute though.
     p = zeros(1, prec);
     cond_entr = zeros(1, prec);  %The quantum conditional entropy
@@ -111,6 +90,9 @@ function wp = witness_performance_on_werner(w, d)
 end
 
 function wi = witness_performance_on_isotropic(w, d)
+% Generates Isotropic states (defined in the paper)
+% Finds the expectation of each state against the witness and plots this. 
+% The actual value of conditional entropy is also plotted. 
     prec = 100; % set precision, the higher this number is, the better - will take longer to compute though.
     p = zeros(1, prec);
     cond_entr = zeros(1, prec);  %The quantum conditional entropy
