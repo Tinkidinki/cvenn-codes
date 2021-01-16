@@ -1,0 +1,3 @@
+[submodule "cvxquad"]
+	path = cvxquad
+	url = git@github.com:hfawzi/cvxquad.git
