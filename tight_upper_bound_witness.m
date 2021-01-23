@@ -11,4 +11,7 @@ cvx_begin
         trace(witness * rho) == chi
 cvx_end
 
+disp("rho")
+disp(rho)
+
 

@@ -65,19 +65,27 @@ function wp = witness_performance_on_werner(w, d)
     p = zeros(1, prec);
     cond_entr = zeros(1, prec);  %The quantum conditional entropy
     wit_res = zeros(1, prec);  %The result of the witness
+    upper_bound = zeros(1, prec); % Tight upper bound on cond entropy
     for i = 1:prec
         p(i) = i/prec;
         rho = werner_like_state(p(i), d);
         cond_entr(i) = quantum_cond_entr2(rho, d);
         wit_res(i) = check_witness(w, rho);
+        upper_bound(i) = tight_upper_bound_witness(w, wit_res(i));
     end
     
     a1 = plot(p, cond_entr, '-'); M1 = "Conditional Entropy"
     a1.LineWidth = 1.5
     hold on;
+
     a2 = plot(p, wit_res, '--'); M2 = "Value of $Tr(W \rho)$"
     a2.LineWidth = 1.5
-    leg = legend([a1,a2], [M1, M2]);
+    hold on;
+
+    a3 = plot(p, upper_bound, ':'); M3 = "Tight Upper Bound on Conditional Entropy"
+    a3.LineWidth = 1.5;
+
+    leg = legend([a1,a2,a3], [M1, M2, M3]);
     set(leg, 'Interpreter', 'latex');
     ax = gca;
     ax.XAxisLocation = 'origin';
