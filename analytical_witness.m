@@ -59,9 +59,9 @@ function w = non_optimal_witness(rho_s, d)
 end
 
 function ub = cve_vs_upperbound_werner(w, d)
-% Generates Werner states on teh line p|phi+><phi+| + (1-p)I/d^2
+% Generates Werner states on the line p|phi+><phi+| + (1-p)I/d^2
 % Finds the expectation value chi of the witness for each state
-% Finds the value of upper bound of T_w^chi for each state
+% Finds the value of tight upper bound of T_w^chi for each state
 % Finds the conditional entropy for each state
 % Returns a difference array of upperbound - conditional entropy. 
 
@@ -100,22 +100,22 @@ function wp = witness_performance_on_werner(w, d)
         wit_res(i) = check_witness(w, rho);
     end
     
-    a1 = plot(p, cond_entr, '-'); M1 = "Conditional entropy $\approx$ Upper bound of $T_{W_{\rho wer}}^\chi$"
+    a1 = plot(p, cond_entr, '-'); M1 = "$S_{A|B}(\sigma_\alpha) \approx$ Tight upper bound of $T_{W_\gamma}^{\chi(\alpha)}$"
     a1.LineWidth = 1.5
     hold on;
 
-    a2 = plot(p, wit_res, '--'); M2 = "Value of $\chi$"
+    a2 = plot(p, wit_res, '--'); M2 = "$\chi(\alpha)$"
     a2.LineWidth = 1.5
     hold on;
 
 
     leg = legend([a1,a2], [M1, M2 ]);
-    leg.FontSize = 14;
+    leg.FontSize = 20;
     set(leg, 'Interpreter', 'latex');
     ax = gca;
     ax.XAxisLocation = 'origin';
     ax.YAxisLocation = 'origin';
-    xlh = xlabel('$p$: Werner Mixing Parameter', 'interpreter', 'latex');
+    xlh = xlabel('$\alpha$: Werner Mixing Parameter', 'interpreter', 'latex', 'FontSize', 20);
     xlh.Position(2) = xlh.Position(2)-0.95;
     xlh.Position(1) = xlh.Position(1)-0.3;
     wp = 0;

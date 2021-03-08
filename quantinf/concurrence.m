@@ -31,6 +31,6 @@ switch any(size(p) == 1)
  case true
   c = 2*abs(p(1)*p(4) - p(2)*p(3));
  case false
-  e = real(sqrt(sort(eig(p*flip(p)))));
+  e = real(sqrt(sort(eig(p*spin_flip(p)))));
   c = max(0,[-1,-1,-1,1]*e);
 end

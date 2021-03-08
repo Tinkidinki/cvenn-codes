@@ -1,14 +1,14 @@
-function r = flip(p)
+function r = spin_flip(p)
 
-% FLIP  Spin flip operation
+% FLIP  Spin spin_flip operation
 % requires: nothing
 % author: Toby Cubitt
 % license: GPL2
 %
-%    FLIP(RHO) carries out the spin flip operation on a 2-qubit
+%    FLIP(RHO) carries out the spin spin_flip operation on a 2-qubit
 %    density matrix, used in the definition of concurrence:
 %
-%      flip(rho) = kron(sy,sy)*conj(rho)*kron(sy,sy)
+%      spin_flip(rho) = kron(sy,sy)*conj(rho)*kron(sy,sy)
 
 
 %% Copyright (C) 2004-2009 Toby Cubitt
