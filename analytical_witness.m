@@ -8,6 +8,7 @@ function funs = analytical_witness
     funs.witness_performance_on_werner = @witness_performance_on_werner;
     funs.witness_performance_on_isotropic = @witness_performance_on_isotropic;
     funs.cve_vs_upperbound_werner = @cve_vs_upperbound_werner;
+    funs.old_witness_performance_on_werner = @old_witness_performance_on_werner
 end
 
 % All logarithms have been taken to the base 2 for calculation of entropy. 
@@ -113,10 +114,11 @@ function wp = witness_performance_on_werner(w, d)
     leg.FontSize = 20;
     set(leg, 'Interpreter', 'latex');
     ax = gca;
+    set(ax, 'FontSize', 14)
     ax.XAxisLocation = 'origin';
     ax.YAxisLocation = 'origin';
-    xlh = xlabel('$\alpha$: Werner Mixing Parameter', 'interpreter', 'latex', 'FontSize', 20);
-    xlh.Position(2) = xlh.Position(2)-0.95;
+    xlh = xlabel('$\alpha$: Werner Mixing Parameter', 'interpreter', 'latex', 'FontSize', 18);
+    xlh.Position(2) = xlh.Position(2)-1.0;
     xlh.Position(1) = xlh.Position(1)-0.3;
     wp = 0;
 
@@ -140,17 +142,53 @@ function wi = witness_performance_on_isotropic(w, d)
     a1 = plot(p, cond_entr, '-'); M1 = "Conditional Entropy"
     a1.LineWidth = 1.5
     hold on;
-    a2 = plot(p, wit_res, '--'); M2 = "Value of $Tr(W \rho)$"
+    a2 = plot(p, wit_res, '--'); M2 = "Value of Tr$(W_{Iso} \rho)$"
     a2.LineWidth = 1.5
     leg = legend([a1,a2], [M1, M2]);
     set(leg, 'Interpreter', 'latex');
+    set(leg, 'FontSize', 20);
     ax = gca;
+    ax.FontSize = 15;
     ax.XAxisLocation = 'origin';
     ax.YAxisLocation = 'origin';
     xlh = xlabel('$\alpha$: Isotropic Mixing Parameter', 'interpreter', 'latex');
+    set(xlh, 'FontSize', 20)
     xlh.Position(2) = xlh.Position(2)-0.95;
     xlh.Position(1) = xlh.Position(1)-0.3;
     wi = 0;
+
+end
+
+function wpo = old_witness_performance_on_werner(w, d)
+    prec = 100; % set precision, the higher this number is, the better - will take longer to compute though.
+    p = zeros(1, prec);
+    cond_entr = zeros(1, prec);  %The quantum conditional entropy
+    wit_res = zeros(1, prec);  %The result of the witness
+    for i = 1:prec
+        p(i) = i/prec;
+        rho = werner_like_state(p(i), d);
+        cond_entr(i) = quantum_cond_entr2(rho, d);
+        wit_res(i) = check_witness(w, rho);
+    end
+    
+    a1 = plot(p, cond_entr, '-'); M1 = "Conditional Entropy"
+    a1.LineWidth = 1.5
+    hold on;
+    a2 = plot(p, wit_res, '--'); M2 = "Value of Tr$(W \rho)$"
+    a2.LineWidth = 1.5
+    ax = gca;
+    ax.FontSize = 15;
+
+    leg = legend([a1,a2], [M1, M2]);
+    set(leg, 'Interpreter', 'latex');
+    set(leg, 'FontSize', 20)
+    ax.XAxisLocation = 'origin';
+    ax.YAxisLocation = 'origin';
+    xlh = xlabel('$p$: Werner Mixing Parameter', 'interpreter', 'latex');
+    set(xlh, 'FontSize', 20)
+    xlh.Position(2) = xlh.Position(2)-0.5;
+    xlh.Position(1) = xlh.Position(1)-0.3;
+    wp = 0;
 
 end
 
