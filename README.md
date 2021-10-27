@@ -1,7 +1,7 @@
 # Witnessing Negative Conditional Entropy 
 
 This repository contains all the codes written in `MATLAB` used to generate results in the paper
-'Witnessing Negative Conditional Entropy', published in [Physical Review A](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.104.012417). Open access available on [arxiv](https://arxiv.org/abs/2001.11237).
+`Witnessing Negative Conditional Entropy', published in [Physical Review A](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.104.012417). Open access available on [arxiv](https://arxiv.org/abs/2001.11237).
 
 It also contains a few quantum functions useful for 2-qubit systems written in `sage`. 
 
